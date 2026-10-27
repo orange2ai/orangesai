@@ -3,14 +3,20 @@
 橘子 / Leo Feng 的个人主页。纯静态，无构建步骤，GitHub Pages 托管。
 
 ```
-index.html   整站（改这个）
-404.html     自定义 404
-og.png       分享卡片 1200×630
-robots.txt   爬虫规则
-sitemap.xml  站点地图
-llms.txt     给 AI 搜索/answer engine 看的摘要
-CNAME        orangesai.com
-.nojekyll    原样发布，不走 Jekyll
+index.html           整站（改这个）
+404.html             自定义 404
+avatar.svg           头像（圆角版，页面里用这个）
+favicon.svg          站点图标（同 avatar.svg）
+favicon-32.png       favicon 回退 32×32
+favicon-192.png      favicon 回退 192×192
+favicon-512.png      大图标 512×512
+apple-touch-icon.png iOS 添加到主屏 180×180
+og.png               分享卡片 1200×630
+robots.txt           爬虫规则
+sitemap.xml          站点地图
+llms.txt             给 AI 搜索/answer engine 看的摘要
+CNAME                orangesai.com
+.nojekyll            原样发布，不走 Jekyll
 ```
 
 ## 改内容
