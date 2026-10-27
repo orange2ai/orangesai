@@ -1,22 +1,27 @@
-# 冯雷 Orange Feng
+# 橘子 Leo Feng
 
-> 冯雷，网名橘子（英文名 Orange Feng，X @oran_ge）。MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。曾在 MiniMax 工作。
+> 橘子（本名冯雷，英文名 Leo Feng，X @oran_ge）。Cola 创始人 & CEO，前 MiniMax 海螺 AI 产品负责人，更早前在 BOSS 直聘、兰亭集势、三星电子做产品经理。公众号「橘AI」，播客「橘座」主理人，Next Token 联合主理人。常驻北京。
 
-ColaOS 是一个"有灵魂的操作系统"：一个住在你电脑里、记得你是谁、能跨应用替你行动的 AI agent。本站是冯雷的个人主页，记录他做的产品、开源的 agent skill 和写过的文章。
+Cola 是一个"有灵魂的操作系统"：一个住在你电脑里、记得你是谁、能跨应用替你行动的 AI agent。本站是橘子的个人主页，记录他做的产品、开源的 agent skill 和写过的文章。
 
 ## 身份
 
-- 中文名：冯雷
-- 英文名 / 网名：Orange Feng、橘子、Orange、叽酱
+- 中文名：冯雷，常用名：橘子
+- 英文名：Leo Feng
 - X：https://x.com/oran_ge
 - GitHub：https://github.com/orange2ai
-- 微信公众号：agent橘
+- 微信公众号：橘AI
+- 播客：橘座（小宇宙）
 
 ## 主要产品
 
-- [ColaOS](https://colaos.ai/): 有灵魂的操作系统，个人 AI agent，能记忆、能跨应用行动。
+- [Cola](https://colaos.ai/): 有灵魂的操作系统，个人 AI agent，能记忆、能跨应用行动。
 - [ListenHub](https://listenhub.ai/): 把文字、链接、文件变成音频、图片和视频。
 - [Labnana](https://labnana.com/): AI 图像生成工作台。
+
+## 播客
+
+- [橘座](https://www.xiaoyuzhoufm.com/podcast/6640bb10390b415a59a41773): 橘子自己的播客，聊书、聊创业、聊那些突然想通的事。
 - [Next Token / 词元之外](https://nexttoken.tv/): AI 视频播客，四位主理人的开放圆桌。
 
 ## 开源
@@ -24,12 +29,10 @@ ColaOS 是一个"有灵魂的操作系统"：一个住在你电脑里、记得�
 - [podcast-to-article](https://github.com/orange2ai/podcast-to-article): 把播客逐字稿整理成可发布长文的 agent skill。
 - [renwei-writing](https://github.com/orange2ai/renwei-writing): 保留作者存在感的改写方法。
 - [orange-line-illustration](https://github.com/orange2ai/orange-line-illustration): 纽约客风格极简编辑插画 skill。
-- [devils-advocate-skill](https://github.com/orange2ai/devils-advocate-skill): 让 AI 持续反驳的魔鬼代言人 skill。
 - [Disk Raccoon](https://github.com/orange2ai/disk-raccoon): macOS 缓存清理 agent。
 
 ## 文章
 
 - 《互联网已死，Agent永生》
-- 《离开 Claude，发现外面根本没下雨》
 
-长文发布在微信公众号「agent橘」。
+长文发布在微信公众号「橘AI」。

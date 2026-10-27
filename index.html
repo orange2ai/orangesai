@@ -3,29 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>冯雷 Orange Feng · ColaOS 创始人</title>
-<meta name="description" content="冯雷，网名橘子（Orange Feng，@oran_ge）。MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。个人主页、作品与文章归档。" />
+<title>橘子 Leo Feng · Cola 创始人 &amp; CEO</title>
+<meta name="description" content="橘子（Leo Feng，本名冯雷），Cola 创始人 &amp; CEO，前 MiniMax 海螺 AI 产品负责人。公众号「橘AI」，播客「橘座」主理人，Next Token 联合主理人。个人主页与作品归档。" />
 <link rel="canonical" href="https://orangesai.com/" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="author" content="冯雷 Orange Feng" />
+<meta name="author" content="橘子 Leo Feng" />
 
-<meta property="og:site_name" content="冯雷 Orange Feng" />
+<meta property="og:site_name" content="橘子 Leo Feng" />
 <meta property="og:type" content="profile" />
 <meta property="og:locale" content="zh_CN" />
-<meta property="og:title" content="冯雷 Orange Feng · ColaOS 创始人" />
-<meta property="og:description" content="MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。" />
+<meta property="og:title" content="橘子 Leo Feng · Cola 创始人 &amp; CEO" />
+<meta property="og:description" content="Cola 创始人 &amp; CEO，前 MiniMax 海螺 AI 产品负责人。公众号「橘AI」，播客「橘座」主理人。" />
 <meta property="og:url" content="https://orangesai.com/" />
 <meta property="og:image" content="https://orangesai.com/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="profile:first_name" content="雷" />
-<meta property="profile:last_name" content="冯" />
 <meta property="profile:username" content="oran_ge" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@oran_ge" />
 <meta name="twitter:creator" content="@oran_ge" />
-<meta name="twitter:title" content="冯雷 Orange Feng · ColaOS 创始人" />
-<meta name="twitter:description" content="MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。" />
+<meta name="twitter:title" content="橘子 Leo Feng · Cola 创始人 &amp; CEO" />
+<meta name="twitter:description" content="Cola 创始人 &amp; CEO，前 MiniMax 海螺 AI 产品负责人。公众号「橘AI」，播客「橘座」主理人。" />
 <meta name="twitter:image" content="https://orangesai.com/og.png" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23e8611c'/%3E%3Ctext x='50' y='50' font-size='60' font-family='PingFang SC,sans-serif' font-weight='600' fill='%23fbf9f6' text-anchor='middle' dominant-baseline='central'%3E%E6%A9%98%3C/text%3E%3C/svg%3E" />
@@ -98,7 +96,6 @@
     border-radius: 2px;
   }
 
-  /* top bar */
   .bar { padding-top: 22px; display: flex; justify-content: flex-end; }
   .toggle {
     appearance: none; border: 1px solid var(--line); background: transparent;
@@ -109,15 +106,14 @@
   }
   .toggle:hover { color: var(--accent); border-color: var(--accent-soft); }
 
-  /* hero */
-  header.hero { padding: 42px 0 8px; }
+  header.hero { padding: 34px 0 8px; }
   .kicker {
     font-family: var(--mono);
     font-size: 11px;
     letter-spacing: .18em;
     text-transform: uppercase;
     color: var(--faint);
-    margin: 0 0 22px;
+    margin: 0 0 20px;
   }
   .kicker::before {
     content: "";
@@ -130,10 +126,10 @@
   h1 {
     font-family: var(--serif);
     font-weight: 600;
-    font-size: clamp(2.3rem, 7vw, 3.3rem);
+    font-size: clamp(2.2rem, 7vw, 3.1rem);
     line-height: 1.1;
-    letter-spacing: -.02em;
-    margin: 0 0 6px;
+    letter-spacing: -.01em;
+    margin: 0;
   }
   h1 .en {
     display: block;
@@ -141,28 +137,21 @@
     font-weight: 400;
     letter-spacing: .04em;
     color: var(--muted);
-    margin-top: 14px;
+    margin-top: 12px;
   }
-  .tagline {
-    font-family: var(--serif);
-    font-size: 1.22rem;
-    line-height: 1.6;
-    color: var(--ink);
-    margin: 26px 0 0;
-    max-width: 30em;
-  }
-  .roles {
-    font-family: var(--mono);
-    font-size: 12.5px;
-    letter-spacing: .02em;
-    color: var(--muted);
-    margin: 18px 0 0;
-  }
-  .roles span { white-space: nowrap; }
-  .roles .sep { color: var(--faint); margin: 0 8px; }
 
-  /* sections */
-  section { padding: 54px 0 0; }
+  ul.facts {
+    list-style: none;
+    margin: 26px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 4px;
+    font-size: .99rem;
+  }
+  ul.facts li { display: flex; gap: 10px; align-items: baseline; }
+  ul.facts .ico { flex: none; width: 1.35em; text-align: center; font-size: .92em; }
+
+  section { padding: 52px 0 0; }
   .label {
     display: flex; align-items: center; gap: 14px;
     font-family: var(--mono);
@@ -180,16 +169,16 @@
   }
   p { margin: 0 0 1.1em; }
   p:last-child { margin-bottom: 0; }
-  .lede { font-size: 1.02rem; }
-  .muted { color: var(--muted); }
-  em { font-style: normal; color: var(--accent); }
-
-  /* entry lists */
-  ul.list { list-style: none; margin: 0; padding: 0; }
-  ul.list > li {
-    padding: 20px 0;
-    border-top: 1px solid var(--line);
+  .lede {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1.65;
+    margin-bottom: 1.2em;
   }
+  .muted { color: var(--muted); }
+
+  ul.list { list-style: none; margin: 0; padding: 0; }
+  ul.list > li { padding: 20px 0; border-top: 1px solid var(--line); }
   ul.list > li:first-child { border-top: 0; padding-top: 4px; }
   ul.list > li:last-child { padding-bottom: 0; }
   .item { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -208,24 +197,22 @@
     color: var(--faint);
     text-transform: uppercase;
   }
-  ul.list p {
-    margin: 8px 0 0;
-    color: var(--muted);
-    font-size: .95rem;
-    line-height: 1.7;
-  }
+  ul.list p { margin: 8px 0 0; color: var(--muted); font-size: .95rem; line-height: 1.7; }
   ul.list p a { color: var(--muted); text-decoration-color: var(--accent-soft); }
   ul.list p a:hover { color: var(--accent); }
 
-  /* connect */
   .connect { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px 24px; margin: 0; padding: 0; list-style: none; }
   .connect li { padding: 10px 0; border-top: 1px solid var(--line); }
   .connect .role { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
   .connect a { text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
   .connect a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
+  .friends { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; padding: 0; list-style: none; font-size: .95rem; }
+  .friends a { text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .friends a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
   footer {
-    margin-top: 72px;
+    margin-top: 68px;
     border-top: 1px solid var(--line);
     padding: 26px 0 60px;
     font-size: .82rem;
@@ -237,7 +224,7 @@
 
   @media (max-width: 520px) {
     body { font-size: 16px; }
-    header.hero { padding-top: 28px; }
+    header.hero { padding-top: 24px; }
     section { padding-top: 44px; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -253,31 +240,30 @@
       "@type": "WebSite",
       "@id": "https://orangesai.com/#website",
       "url": "https://orangesai.com/",
-      "name": "冯雷 Orange Feng",
+      "name": "橘子 Leo Feng",
       "inLanguage": "zh-CN",
-      "description": "MarsWave 创始人冯雷（橘子 / Orange Feng）的个人主页：ColaOS、ListenHub、播客与开源作品归档。",
+      "description": "Cola 创始人 & CEO 橘子（Leo Feng）的个人主页：Cola、ListenHub、Labnana、播客与开源作品归档。",
       "publisher": { "@id": "https://orangesai.com/#person" }
     },
     {
       "@type": "Person",
       "@id": "https://orangesai.com/#person",
-      "name": "冯雷",
-      "alternateName": ["Orange Feng", "橘子", "Orange", "oran_ge", "叽酱"],
-      "givenName": "雷",
-      "familyName": "冯",
+      "name": "橘子",
+      "alternateName": ["冯雷", "Leo Feng", "oran_ge", "叽酱"],
       "url": "https://orangesai.com/",
       "image": "https://orangesai.com/og.png",
       "jobTitle": "创始人 & CEO",
-      "description": "MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。",
+      "description": "Cola 创始人 & CEO，前 MiniMax 海螺 AI 产品负责人，更早前在 BOSS 直聘、兰亭集势、三星电子做产品经理。公众号「橘AI」，播客「橘座」主理人，Next Token 联合主理人。常驻北京。",
       "knowsLanguage": ["zh-CN", "en"],
-      "knowsAbout": ["AI Agent", "个人 AI 操作系统", "AI 产品设计", "大模型应用", "AI 视频播客", "AI 写作"],
+      "knowsAbout": ["AI Agent", "个人 AI 操作系统", "AI 产品设计", "大模型应用", "AI 播客", "AI 写作"],
+      "homeLocation": { "@type": "Place", "name": "北京" },
       "worksFor": [
-        { "@type": "Organization", "name": "MarsWave", "url": "https://listenhub.ai/" },
-        { "@type": "Organization", "name": "ColaOS", "url": "https://colaos.ai/" }
+        { "@type": "Organization", "name": "Cola", "url": "https://colaos.ai/" },
+        { "@type": "Organization", "name": "MarsWave" }
       ],
       "founder": [
-        { "@type": "Organization", "name": "MarsWave" },
-        { "@type": "Organization", "name": "ColaOS", "url": "https://colaos.ai/" }
+        { "@type": "Organization", "name": "Cola", "url": "https://colaos.ai/" },
+        { "@type": "Organization", "name": "MarsWave" }
       ],
       "sameAs": [
         "https://x.com/oran_ge",
@@ -285,7 +271,8 @@
         "https://colaos.ai/",
         "https://listenhub.ai/",
         "https://labnana.com/",
-        "https://nexttoken.tv/"
+        "https://nexttoken.tv/",
+        "https://www.xiaoyuzhoufm.com/podcast/6640bb10390b415a59a41773"
       ]
     }
   ]
@@ -301,26 +288,23 @@
 
   <header class="hero">
     <p class="kicker">Personal site · 个人主页</p>
-    <h1>
-      冯雷
-      <span class="en">Orange Feng</span>
-    </h1>
-    <p class="tagline">我做的是一个有灵魂的操作系统，不是又一个工具。</p>
-    <p class="roles">
-      <span>MarsWave 创始人</span><span class="sep">·</span>
-      <span>ColaOS</span><span class="sep">·</span>
-      <span>ListenHub</span><span class="sep">·</span>
-      <span>Next Token 联合主理人</span>
-    </p>
+    <h1>橘子<span class="en">Leo Feng</span></h1>
+    <ul class="facts">
+      <li><span class="ico">🍊</span>冯雷 / 橘子</li>
+      <li><span class="ico">☀️</span>Cola 创始人 &amp; CEO</li>
+      <li><span class="ico">🐚</span>前 MiniMax 海螺 AI 产品负责人</li>
+      <li><span class="ico">🧵</span>更前，在 BOSS 直聘、兰亭集势、三星电子做 PM</li>
+      <li><span class="ico">✍️</span>公众号，橘AI</li>
+      <li><span class="ico">📍</span>常驻北京</li>
+    </ul>
   </header>
 
   <section id="about">
     <div class="label">关于</div>
-    <h2>你好，我是橘子</h2>
-    <p class="lede">我本名冯雷，网上大部分时候叫橘子，也有人按我的英文名 Orange 找我。以前在 MiniMax 工作，现在是自己创业，做 AI 产品。</p>
-    <p>现在的重心是 <a href="https://colaos.ai/">ColaOS</a>。它不像一个对话框，更像一个住在你电脑里、记得你是谁、能替你在各种应用之间动手的东西。在此之前我们做了 <a href="https://listenhub.ai/">ListenHub</a>，把文字变成音频；还有 <a href="https://labnana.com/">Labnana</a>，一个 AI 图像生成工具。</p>
-    <p>产品之外我写文章，也做播客。我写《互联网已死，Agent永生》，也写过《离开 Claude，发现外面根本没下雨》。现在和杨攀、歸藏、向阳乔木一起做 AI 视频播客《Next Token · 词元之外》，每周一场开放圆桌。我自己还做一档一对一的思想实验对谈，叫「橘座」。</p>
-    <p>我每天六点多起床，习惯是先把想法变成能跑的东西，再去想它值不值得。</p>
+    <p class="lede">我做的是一个有灵魂的操作系统，不是又一个工具。</p>
+    <p>我本名冯雷，网上大部分时候叫橘子，英文名 Leo。以前在 MiniMax 负责海螺 AI 的产品，现在自己在创业，做 Cola 和 ListenHub。在此之前在 BOSS 直聘、兰亭集势、三星电子做过产品经理。</p>
+    <p>产品之外我还写文章，关注 AI 行业的前沿信息，都发在公众号 <strong>橘AI</strong>，搜名字就能找到。代表作是《互联网已死，Agent永生》。我也录播客：一档是我自己的，叫 <a href="#podcast">橘座</a>；另一档是和 <a href="https://yangpan.com/">杨攀</a>、<a href="https://www.guizang.ai/">歸藏</a>、<a href="https://www.qiaomu.ai/">向阳乔木</a> 一起的 <a href="https://nexttoken.tv/">Next Token Weekly</a>。</p>
+    <p>六点起床，喜欢阅读，喜欢骑行。</p>
   </section>
 
   <section id="projects">
@@ -328,8 +312,8 @@
     <h2>产品</h2>
     <ul class="list">
       <li>
-        <div class="item"><a class="name" href="https://colaos.ai/">ColaOS</a><span class="meta">Agent OS</span></div>
-        <p>世界上第一个有灵魂的操作系统。它记得你、有自己的觉知和牵挂，可以在你的电脑里跨应用替你办事。我们现在把全部精力放在这里。</p>
+        <div class="item"><a class="name" href="https://colaos.ai/">Cola</a><span class="meta">Agent OS</span></div>
+        <p>世界上第一个有灵魂的操作系统。它记得你、有自己的觉知和牵挂，可以在你的电脑里跨应用替你办事。现在我把全部精力放在这里。</p>
       </li>
       <li>
         <div class="item"><a class="name" href="https://listenhub.ai/">ListenHub</a><span class="meta">Audio · Video</span></div>
@@ -339,9 +323,20 @@
         <div class="item"><a class="name" href="https://labnana.com/">Labnana</a><span class="meta">Image</span></div>
         <p>AI 图像生成工作台，把 Nano Banana、GPT-Image-2、Seedream 这些模型放在一起用。</p>
       </li>
+    </ul>
+  </section>
+
+  <section id="podcast">
+    <div class="label">在说</div>
+    <h2>播客</h2>
+    <ul class="list">
       <li>
-        <div class="item"><a class="name" href="https://nexttoken.tv/">Next Token / 词元之外</a><span class="meta">Podcast</span></div>
-        <p>AI 视频播客，四位主理人的开放圆桌。我负责的其中一档是我一个人的对谈实验，叫「橘座」。</p>
+        <div class="item"><a class="name" href="https://www.xiaoyuzhoufm.com/podcast/6640bb10390b415a59a41773">橘座</a><span class="meta">小宇宙</span></div>
+        <p>我自己的播客。聊书，聊创业，聊那些突然想通的事，也请身边的朋友来坐坐。在小宇宙上可以订阅和收听。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://nexttoken.tv/">Next Token / 词元之外</a><span class="meta">Weekly</span></div>
+        <p>AI 视频播客，四位主理人的开放圆桌。我是联合主理人之一。</p>
       </li>
     </ul>
   </section>
@@ -351,28 +346,12 @@
     <h2>顺手做的小东西</h2>
     <ul class="list">
       <li>
-        <div class="item"><a class="name" href="https://chromewebstore.google.com/detail/clean-x-up/fkcemmgglcdomeffagocfemhhmjdgfjb">Clean X Up</a><span class="meta">Chrome</span></div>
-        <p>一个把 X 上那些让人分心的东西拆掉的浏览器扩展：未读角标、新帖提示、右侧栏、标签页数字。</p>
-      </li>
-      <li>
         <div class="item"><a class="name" href="https://coucoubike.com">Coucou Bike</a><span class="meta">iOS</span></div>
         <p>骑车的时候有一只鸟在你耳机里报数：速度、距离、心率，说给你听。开源的 iPhone 应用。</p>
       </li>
       <li>
-        <div class="item"><a class="name" href="http://claudecodenow.com/">Claude Code Now</a><span class="meta">macOS</span></div>
-        <p>最快打开 Claude Code 的方式。点一下 Dock，或者从任意文件夹直接启动。</p>
-      </li>
-      <li>
-        <div class="item"><a class="name" href="https://orange2ai.github.io/pelican-bike/">Pelican on a Bicycle</a><span class="meta">Game</span></div>
-        <p>一只鹈鹕骑自行车的可玩 canvas 小游戏。</p>
-      </li>
-      <li>
         <div class="item"><a class="name" href="https://github.com/orange2ai/disk-raccoon">Disk Raccoon</a><span class="meta">macOS</span></div>
         <p>macOS 缓存清理 agent，先把缓存画成地图，再决定吃什么。第一次实战一晚清出 135GB。</p>
-      </li>
-      <li>
-        <div class="item"><a class="name" href="https://github.com/orange2ai/Flash-Translate">Flash Translate</a><span class="meta">macOS</span></div>
-        <p>极简的菜单栏划词翻译：选中就翻译。</p>
       </li>
     </ul>
   </section>
@@ -394,10 +373,6 @@
         <div class="item"><a class="name" href="https://github.com/orange2ai/orange-line-illustration">orange-line-illustration</a><span class="meta">Visual</span></div>
         <p>纽约客风格的极简编辑插画：一个概念，一点颜色，大量留白。</p>
       </li>
-      <li>
-        <div class="item"><a class="name" href="https://github.com/orange2ai/devils-advocate-skill">devils-advocate-skill</a><span class="meta">Thinking</span></div>
-        <p>让 AI 一直泼冷水，直到它再也泼不出来为止。</p>
-      </li>
     </ul>
   </section>
 
@@ -406,15 +381,10 @@
     <h2>文章</h2>
     <ul class="list">
       <li>
-        <div class="item"><span class="name plain">互联网已死，Agent永生</span></div>
-        <p>写 AI 时代入口的迁移。发出来之后在行业里传得比较广。</p>
-      </li>
-      <li>
-        <div class="item"><span class="name plain">离开 Claude，发现外面根本没下雨</span></div>
-        <p>关于跳出系统本身去想问题，以及人被工具塑造而不自知这件事。</p>
+        <div class="item"><span class="name plain">互联网已死，Agent永生</span><span class="meta">代表作</span></div>
+        <p>写 AI 时代入口的迁移。发出来之后在行业里传得比较广，长文都在公众号「橘AI」。</p>
       </li>
     </ul>
-    <p class="muted" style="margin-top:18px">长文都发在微信公众号「agent橘」，搜名字就能找到。</p>
   </section>
 
   <section id="connect">
@@ -423,13 +393,25 @@
     <ul class="connect">
       <li><span class="role">X / Twitter</span><a href="https://x.com/oran_ge" rel="me">@oran_ge</a></li>
       <li><span class="role">GitHub</span><a href="https://github.com/orange2ai" rel="me">orange2ai</a></li>
-      <li><span class="role">微信</span>公众号 agent橘</li>
-      <li><span class="role">播客</span><a href="https://nexttoken.tv/">Next Token</a></li>
+      <li><span class="role">微信</span>公众号「橘AI」</li>
+      <li><span class="role">小宇宙</span><a href="https://www.xiaoyuzhoufm.com/podcast/6640bb10390b415a59a41773">橘座</a></li>
+    </ul>
+  </section>
+
+  <section id="friends">
+    <div class="label">友情链接</div>
+    <ul class="friends">
+      <li><a href="https://nexttoken.tv/" target="_blank" rel="noopener">Next Token｜词元之外</a></li>
+      <li><a href="https://yangpan.com/" target="_blank" rel="noopener">杨攀同学</a></li>
+      <li><a href="https://www.guizang.ai/" target="_blank" rel="noopener">歸藏</a></li>
+      <li><a href="https://www.qiaomu.ai/" target="_blank" rel="noopener">向阳乔木</a></li>
+      <li><a href="https://www.laoyao.cn/" target="_blank" rel="noopener">姚金刚</a></li>
+      <li><a href="https://xiaohu.ai/" target="_blank" rel="noopener">小互</a></li>
     </ul>
   </section>
 
   <footer>
-    <p class="sig">冯雷 · Orange Feng · orangesai.com</p>
+    <p class="sig">橘子 · Leo Feng · orangesai.com</p>
     <p>本站是个人主页，与 Orange S.A.、Orange Brand Services Limited 及任何电信公司无关，也没有任何隶属或合作关系。</p>
   </footer>
 </div>
@@ -448,9 +430,7 @@
       if (t === 'light') return false;
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    function paint() {
-      btn.textContent = isDark() ? '浅色' : '深色';
-    }
+    function paint() { btn.textContent = isDark() ? '浅色' : '深色'; }
     btn.addEventListener('click', function () {
       var next = isDark() ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
