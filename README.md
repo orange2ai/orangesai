@@ -1,6 +1,6 @@
 # orangesai.com
 
-冯雷 / Orange Feng 的个人主页。纯静态，无构建步骤，GitHub Pages 托管。
+橘子 / Leo Feng 的个人主页。纯静态，无构建步骤，GitHub Pages 托管。
 
 ```
 index.html   整站（改这个）
