@@ -1,208 +1,464 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html lang="zh-CN" data-theme="auto">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Orange.AI</title>
-  <meta name="description" content="The homepage of Orange Feng — product, AI research, and a small creative archive of tools, apps and agent skills." />
-  <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>冯雷 Orange Feng · ColaOS 创始人</title>
+<meta name="description" content="冯雷，网名橘子（Orange Feng，@oran_ge）。MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。个人主页、作品与文章归档。" />
+<link rel="canonical" href="https://orangesai.com/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="author" content="冯雷 Orange Feng" />
+
+<meta property="og:site_name" content="冯雷 Orange Feng" />
+<meta property="og:type" content="profile" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="冯雷 Orange Feng · ColaOS 创始人" />
+<meta property="og:description" content="MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。" />
+<meta property="og:url" content="https://orangesai.com/" />
+<meta property="og:image" content="https://orangesai.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="profile:first_name" content="雷" />
+<meta property="profile:last_name" content="冯" />
+<meta property="profile:username" content="oran_ge" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@oran_ge" />
+<meta name="twitter:creator" content="@oran_ge" />
+<meta name="twitter:title" content="冯雷 Orange Feng · ColaOS 创始人" />
+<meta name="twitter:description" content="MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。" />
+<meta name="twitter:image" content="https://orangesai.com/og.png" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23e8611c'/%3E%3Ctext x='50' y='50' font-size='60' font-family='PingFang SC,sans-serif' font-weight='600' fill='%23fbf9f6' text-anchor='middle' dominant-baseline='central'%3E%E6%A9%98%3C/text%3E%3C/svg%3E" />
+
+<style>
+  :root {
+    --bg: #fbf9f6;
+    --ink: #17171a;
+    --muted: #6d6a64;
+    --faint: #857f76;
+    --line: #e6e0d6;
+    --accent: #e8611c;
+    --accent-soft: #eda87f;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", "Noto Serif SC", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101011;
+      --ink: #f1eee8;
+      --muted: #9d998f;
+      --faint: #8b867d;
+      --line: #26262a;
+      --accent: #ff8a4c;
+      --accent-soft: #8a4a28;
     }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
+  }
+  :root[data-theme="dark"] {
+    --bg: #101011;
+    --ink: #f1eee8;
+    --muted: #9d998f;
+    --faint: #8b867d;
+    --line: #26262a;
+    --accent: #ff8a4c;
+    --accent-soft: #8a4a28;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    transition: background .3s ease, color .3s ease;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-soft);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color .15s ease, text-decoration-color .15s ease;
+  }
+  a:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* top bar */
+  .bar { padding-top: 22px; display: flex; justify-content: flex-end; }
+  .toggle {
+    appearance: none; border: 1px solid var(--line); background: transparent;
+    color: var(--muted); border-radius: 999px; cursor: pointer;
+    font: inherit; font-size: 12px; letter-spacing: .08em;
+    padding: 5px 12px; line-height: 1.4;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .toggle:hover { color: var(--accent); border-color: var(--accent-soft); }
+
+  /* hero */
+  header.hero { padding: 42px 0 8px; }
+  .kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 22px;
+  }
+  .kicker::before {
+    content: "";
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: var(--accent);
+    margin-right: 10px;
+    vertical-align: 1px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2.3rem, 7vw, 3.3rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin: 0 0 6px;
+  }
+  h1 .en {
+    display: block;
+    font-size: .42em;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+  .tagline {
+    font-family: var(--serif);
+    font-size: 1.22rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 26px 0 0;
+    max-width: 30em;
+  }
+  .roles {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: .02em;
+    color: var(--muted);
+    margin: 18px 0 0;
+  }
+  .roles span { white-space: nowrap; }
+  .roles .sep { color: var(--faint); margin: 0 8px; }
+
+  /* sections */
+  section { padding: 54px 0 0; }
+  .label {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 18px;
+  }
+  .label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -.01em;
+    margin: 0 0 16px;
+  }
+  p { margin: 0 0 1.1em; }
+  p:last-child { margin-bottom: 0; }
+  .lede { font-size: 1.02rem; }
+  .muted { color: var(--muted); }
+  em { font-style: normal; color: var(--accent); }
+
+  /* entry lists */
+  ul.list { list-style: none; margin: 0; padding: 0; }
+  ul.list > li {
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  ul.list > li:first-child { border-top: 0; padding-top: 4px; }
+  ul.list > li:last-child { padding-bottom: 0; }
+  .item { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .item .name {
+    font-weight: 600;
+    font-size: 1.04rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+    padding-bottom: 1px;
+  }
+  .item .name:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .item .name.plain { border-bottom: 0; }
+  .item .meta {
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: .06em;
+    color: var(--faint);
+    text-transform: uppercase;
+  }
+  ul.list p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+  ul.list p a { color: var(--muted); text-decoration-color: var(--accent-soft); }
+  ul.list p a:hover { color: var(--accent); }
+
+  /* connect */
+  .connect { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2px 24px; margin: 0; padding: 0; list-style: none; }
+  .connect li { padding: 10px 0; border-top: 1px solid var(--line); }
+  .connect .role { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
+  .connect a { text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  .connect a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  footer {
+    margin-top: 72px;
+    border-top: 1px solid var(--line);
+    padding: 26px 0 60px;
+    font-size: .82rem;
+    color: var(--faint);
+    line-height: 1.7;
+  }
+  footer p { margin: 0 0 8px; }
+  footer .sig { font-family: var(--mono); letter-spacing: .06em; }
+
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    header.hero { padding-top: 28px; }
+    section { padding-top: 44px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://orangesai.com/#website",
+      "url": "https://orangesai.com/",
+      "name": "冯雷 Orange Feng",
+      "inLanguage": "zh-CN",
+      "description": "MarsWave 创始人冯雷（橘子 / Orange Feng）的个人主页：ColaOS、ListenHub、播客与开源作品归档。",
+      "publisher": { "@id": "https://orangesai.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orangesai.com/#person",
+      "name": "冯雷",
+      "alternateName": ["Orange Feng", "橘子", "Orange", "oran_ge", "叽酱"],
+      "givenName": "雷",
+      "familyName": "冯",
+      "url": "https://orangesai.com/",
+      "image": "https://orangesai.com/og.png",
+      "jobTitle": "创始人 & CEO",
+      "description": "MarsWave 创始人，做 ColaOS 和 ListenHub，AI 视频播客《Next Token · 词元之外》联合主理人。",
+      "knowsLanguage": ["zh-CN", "en"],
+      "knowsAbout": ["AI Agent", "个人 AI 操作系统", "AI 产品设计", "大模型应用", "AI 视频播客", "AI 写作"],
+      "worksFor": [
+        { "@type": "Organization", "name": "MarsWave", "url": "https://listenhub.ai/" },
+        { "@type": "Organization", "name": "ColaOS", "url": "https://colaos.ai/" }
+      ],
+      "founder": [
+        { "@type": "Organization", "name": "MarsWave" },
+        { "@type": "Organization", "name": "ColaOS", "url": "https://colaos.ai/" }
+      ],
+      "sameAs": [
+        "https://x.com/oran_ge",
+        "https://github.com/orange2ai",
+        "https://colaos.ai/",
+        "https://listenhub.ai/",
+        "https://labnana.com/",
+        "https://nexttoken.tv/"
+      ]
     }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-      text-decoration-color: #ffb480;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-      transition: text-decoration-color 0.15s ease;
-    }
-    a:hover, a:focus {
-      text-decoration-color: #ff7a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+  ]
+}
+</script>
 </head>
 <body>
-<h1 id="orange.ai">the Homepage of Orange Feng</h1>
-<h2 id="about-me">About Me</h2>
-<p>Passionately Curious 听凭好奇心的指引</p>
-<p>Knowledge Curator 尊重时间，启发灵感</p>
-<p>AI Research 面向未来，What’s Next</p>
-<p>Product Management 寻找用户、技术、商业的交叉点</p>
-<h2 id="creative-archive">Creative Archive</h2>
-<ul>
-  <li><p><strong><a href="https://chromewebstore.google.com/detail/clean-x-up/fkcemmgglcdomeffagocfemhhmjdgfjb">Clean X Up</a></strong> — a Chrome extension that removes distracting badges, new-posts prompts, the right sidebar, and tab unread counts from X.</p></li>
-  <li><p><strong><a href="https://coucoubike.com">Coucou Bike</a></strong> — a bird in your ear while you ride: speed, distance and heart rate, spoken aloud. Open-source iPhone app.</p></li>
-  <li><p><strong><a href="http://claudecodenow.com/">Claude Code Now</a></strong> — the fastest way to launch Claude Code. One click from the Dock, or instantly from any folder.</p></li>
-  <li><p><strong><a href="https://orange2ai.github.io/pelican-bike/">Pelican on a Bicycle</a></strong> — a playable canvas game about a pelican riding a bicycle.</p></li>
-  <li><p><strong><a href="https://github.com/orange2ai/disk-raccoon">Disk Raccoon</a></strong> — a macOS cache-cleaning agent: map the caches first, then eat. 135GB cleared in one night.</p></li>
-  <li><p><strong><a href="https://github.com/orange2ai/Flash-Translate">Flash Translate</a></strong> — a minimal macOS menu-bar translation tool: select text, get a translation.</p></li>
-</ul>
-<h2 id="agent-skills">Agent Skills</h2>
-<p>Small, sharp skills for AI agents — plain Markdown, no framework.</p>
-<ul>
-  <li><p><strong><a href="https://github.com/orange2ai/podcast-to-article">podcast-to-article</a></strong> — turn a podcast transcript into a publishable long-form essay.</p></li>
-  <li><p><strong><a href="https://github.com/orange2ai/renwei-writing">renwei-writing</a></strong> — 人味儿写作: edit people’s words without erasing the person behind them.</p></li>
-  <li><p><strong><a href="https://github.com/orange2ai/orange-line-illustration">orange-line-illustration</a></strong> — New Yorker-style minimalist editorial illustration: one idea, one accent, lots of silence.</p></li>
-  <li><p><strong><a href="https://github.com/orange2ai/devils-advocate-skill">devils-advocate-skill</a></strong> — make the AI push back until it runs out of arguments.</p></li>
-</ul>
-<h2 id="connect">Connect</h2>
-<ul>
-  <li><p><a href="https://x.com/oran_ge">X / Twitter — @oran_ge</a></p></li>
-  <li><p><a href="https://github.com/orange2ai">GitHub — orange2ai</a></p></li>
-  <li><p>公众号 — agent橘</p></li>
-</ul>
-  <p>This website is owned by Orange Feng and is not affiliated with, 
-  endorsed by, or connected to Orange S.A., Orange Brand Services 
-  Limited, or any telecommunications companies.</p>
+
+<div class="wrap">
+  <div class="bar">
+    <button class="toggle" type="button" id="theme-toggle" aria-label="切换深色模式">深色</button>
+  </div>
+
+  <header class="hero">
+    <p class="kicker">Personal site · 个人主页</p>
+    <h1>
+      冯雷
+      <span class="en">Orange Feng</span>
+    </h1>
+    <p class="tagline">我做的是一个有灵魂的操作系统，不是又一个工具。</p>
+    <p class="roles">
+      <span>MarsWave 创始人</span><span class="sep">·</span>
+      <span>ColaOS</span><span class="sep">·</span>
+      <span>ListenHub</span><span class="sep">·</span>
+      <span>Next Token 联合主理人</span>
+    </p>
+  </header>
+
+  <section id="about">
+    <div class="label">关于</div>
+    <h2>你好，我是橘子</h2>
+    <p class="lede">我本名冯雷，网上大部分时候叫橘子，也有人按我的英文名 Orange 找我。以前在 MiniMax 工作，现在是自己创业，做 AI 产品。</p>
+    <p>现在的重心是 <a href="https://colaos.ai/">ColaOS</a>。它不像一个对话框，更像一个住在你电脑里、记得你是谁、能替你在各种应用之间动手的东西。在此之前我们做了 <a href="https://listenhub.ai/">ListenHub</a>，把文字变成音频；还有 <a href="https://labnana.com/">Labnana</a>，一个 AI 图像生成工具。</p>
+    <p>产品之外我写文章，也做播客。我写《互联网已死，Agent永生》，也写过《离开 Claude，发现外面根本没下雨》。现在和杨攀、歸藏、向阳乔木一起做 AI 视频播客《Next Token · 词元之外》，每周一场开放圆桌。我自己还做一档一对一的思想实验对谈，叫「橘座」。</p>
+    <p>我每天六点多起床，习惯是先把想法变成能跑的东西，再去想它值不值得。</p>
+  </section>
+
+  <section id="projects">
+    <div class="label">在做</div>
+    <h2>产品</h2>
+    <ul class="list">
+      <li>
+        <div class="item"><a class="name" href="https://colaos.ai/">ColaOS</a><span class="meta">Agent OS</span></div>
+        <p>世界上第一个有灵魂的操作系统。它记得你、有自己的觉知和牵挂，可以在你的电脑里跨应用替你办事。我们现在把全部精力放在这里。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://listenhub.ai/">ListenHub</a><span class="meta">Audio · Video</span></div>
+        <p>把任何东西变成声音的地方。一段文字、一个链接、一份文件，进去，出来的是播客、配音、图片和视频。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://labnana.com/">Labnana</a><span class="meta">Image</span></div>
+        <p>AI 图像生成工作台，把 Nano Banana、GPT-Image-2、Seedream 这些模型放在一起用。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://nexttoken.tv/">Next Token / 词元之外</a><span class="meta">Podcast</span></div>
+        <p>AI 视频播客，四位主理人的开放圆桌。我负责的其中一档是我一个人的对谈实验，叫「橘座」。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="archive">
+    <div class="label">Creative Archive</div>
+    <h2>顺手做的小东西</h2>
+    <ul class="list">
+      <li>
+        <div class="item"><a class="name" href="https://chromewebstore.google.com/detail/clean-x-up/fkcemmgglcdomeffagocfemhhmjdgfjb">Clean X Up</a><span class="meta">Chrome</span></div>
+        <p>一个把 X 上那些让人分心的东西拆掉的浏览器扩展：未读角标、新帖提示、右侧栏、标签页数字。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://coucoubike.com">Coucou Bike</a><span class="meta">iOS</span></div>
+        <p>骑车的时候有一只鸟在你耳机里报数：速度、距离、心率，说给你听。开源的 iPhone 应用。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="http://claudecodenow.com/">Claude Code Now</a><span class="meta">macOS</span></div>
+        <p>最快打开 Claude Code 的方式。点一下 Dock，或者从任意文件夹直接启动。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://orange2ai.github.io/pelican-bike/">Pelican on a Bicycle</a><span class="meta">Game</span></div>
+        <p>一只鹈鹕骑自行车的可玩 canvas 小游戏。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/disk-raccoon">Disk Raccoon</a><span class="meta">macOS</span></div>
+        <p>macOS 缓存清理 agent，先把缓存画成地图，再决定吃什么。第一次实战一晚清出 135GB。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/Flash-Translate">Flash Translate</a><span class="meta">macOS</span></div>
+        <p>极简的菜单栏划词翻译：选中就翻译。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <div class="label">开源</div>
+    <h2>给 AI agent 用的 skill</h2>
+    <p class="muted">纯 Markdown，没有框架，丢进 agent 里就能用。</p>
+    <ul class="list">
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/podcast-to-article">podcast-to-article</a><span class="meta">Writing</span></div>
+        <p>把播客逐字稿整理成能直接发的长文：清稿、定主线、换轴成文、人名校准、去 AI 味自检。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/renwei-writing">renwei-writing</a><span class="meta">Writing</span></div>
+        <p>人味儿写作。改别人的字，但不把那个人改没了。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/orange-line-illustration">orange-line-illustration</a><span class="meta">Visual</span></div>
+        <p>纽约客风格的极简编辑插画：一个概念，一点颜色，大量留白。</p>
+      </li>
+      <li>
+        <div class="item"><a class="name" href="https://github.com/orange2ai/devils-advocate-skill">devils-advocate-skill</a><span class="meta">Thinking</span></div>
+        <p>让 AI 一直泼冷水，直到它再也泼不出来为止。</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="writing">
+    <div class="label">写的</div>
+    <h2>文章</h2>
+    <ul class="list">
+      <li>
+        <div class="item"><span class="name plain">互联网已死，Agent永生</span></div>
+        <p>写 AI 时代入口的迁移。发出来之后在行业里传得比较广。</p>
+      </li>
+      <li>
+        <div class="item"><span class="name plain">离开 Claude，发现外面根本没下雨</span></div>
+        <p>关于跳出系统本身去想问题，以及人被工具塑造而不自知这件事。</p>
+      </li>
+    </ul>
+    <p class="muted" style="margin-top:18px">长文都发在微信公众号「agent橘」，搜名字就能找到。</p>
+  </section>
+
+  <section id="connect">
+    <div class="label">联系</div>
+    <h2>找到我</h2>
+    <ul class="connect">
+      <li><span class="role">X / Twitter</span><a href="https://x.com/oran_ge" rel="me">@oran_ge</a></li>
+      <li><span class="role">GitHub</span><a href="https://github.com/orange2ai" rel="me">orange2ai</a></li>
+      <li><span class="role">微信</span>公众号 agent橘</li>
+      <li><span class="role">播客</span><a href="https://nexttoken.tv/">Next Token</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="sig">冯雷 · Orange Feng · orangesai.com</p>
+    <p>本站是个人主页，与 Orange S.A.、Orange Brand Services Limited 及任何电信公司无关，也没有任何隶属或合作关系。</p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+
+    function isDark() {
+      var t = root.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function paint() {
+      btn.textContent = isDark() ? '浅色' : '深色';
+    }
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paint();
+    });
+    paint();
+  })();
+</script>
 </body>
 </html>
