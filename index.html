@@ -106,7 +106,16 @@
   }
   .toggle:hover { color: var(--accent); border-color: var(--accent-soft); }
 
-  header.hero { padding: 34px 0 8px; }
+  header.hero { padding: 34px 0 8px; position: relative; }
+  header.hero::before {
+    content: "";
+    position: absolute;
+    left: -90px; top: -70px;
+    width: 360px; height: 230px;
+    background: radial-gradient(closest-side, rgba(232,97,24,.15), rgba(232,97,24,0) 72%);
+    pointer-events: none;
+  }
+  header.hero > * { position: relative; }
   h1 {
     font-family: var(--serif);
     font-weight: 600;
